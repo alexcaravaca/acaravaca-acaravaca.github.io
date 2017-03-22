@@ -31,8 +31,8 @@
 				        console.info("work "+data);
 				    },
                       
-                    error: function() {
-                        console.log('it doesnt work')},  
+                    error: function(error) {
+                        console.log('it doesnt work'+ error)},  
                       
 				});
 
