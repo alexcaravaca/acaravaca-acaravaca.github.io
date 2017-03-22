@@ -21,14 +21,19 @@
 				    },
 				    headers: {
 				       
-				    Authorization: 'bearer 2baef08f-bbcc-4bbd-9c53-6e2dc54a1bdf'
+				    Authorization: 'bearer 2baef08f-bbcc-4bbd-9c53-6e2dc54a1bdf',
+                    'Access-Control-Allow-Origin': '*'     
 					 
 
 				    },
 				   
 				    success: function (data) {
-				        console.info(data);
-				    }
+				        console.info("work "+data);
+				    },
+                      
+                    error: function() {
+                        console.log('it doesnt work')},  
+                      
 				});
 
 
