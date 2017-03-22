@@ -12,6 +12,7 @@
 				    url: 'https://demo-1.fico.site/data/api/entities/customer',
 				    type: 'POST',
                     crossDomain: true,  
+                    jsonp: "callback",
                     dataType: 'jsonp',
 				    data: {
 				        	"email":" devtest@prodigious ",
@@ -28,32 +29,38 @@
 
 				    },
                       
-                    jsonpCallback: "localJsonpCallback",  
-				   
-				    success: function (data) {
-				        console.info("work "+data);
-				    },
+                    
+   
+ 
+    
+                    // Work with the response
+                    success: function( response ) {
+                        console.log( response ); // server response
+                    },
                       
-                    error: function(error) {
-                        console.log('it doesnt work'+ error)},  
+                    error  : function(response){
+                        console.log(response);
+                    }
                       
+                      
+
 				});
 
+            function localJsonpCallback(json) {
+                if (!json.Error) {
+                   console.log(json.Error);
+                }
+                else {
 
+                    console.log(json);
+
+                }
+            }
   
 	});
     
     
-    function localJsonpCallback(json) {
-        if (!json.Error) {
-           console.log(json.Error);
-        }
-        else {
-            
-            console.log(json);
-            
-        }
-    }
+    
 
 
 })();
