@@ -9,7 +9,7 @@
 		  console.log("click");
  													
 				  $.ajax({
-				    url: 'https://demo-1.fico.site/data/api/entities/customer',
+				    url: 'https://demo-1.fico.site/data/api/entities/customer?callback=?',
 				    type: 'POST',
                     crossDomain: true,  
                     jsonp: "callback",
