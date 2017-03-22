@@ -10,7 +10,7 @@
  													
 				  $.ajax({
 				    url: 'https://demo-1.fico.site/data/api/entities/customer',
-				    type: 'get',
+				    type: 'post',
                     crossDomain: true,
                     dataType: 'json',
 				    data: {
