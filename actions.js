@@ -12,7 +12,7 @@
 				    url: 'https://demo-1.fico.site/data/api/entities/customer',
 				    type: 'post',
                     crossDomain: true,
-                    dataType: 'json',
+                    dataType: 'jsonp',
 				    data: {
 				        	"email":" alexdev@prodigious ",
 							"customer_id":1234568903,
