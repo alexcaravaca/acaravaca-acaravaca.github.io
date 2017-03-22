@@ -12,12 +12,14 @@
 				    url: 'https://demo-1.fico.site/data/api/entities/customer',
 				    type: 'post',
                     crossDomain: true,
-                    dataType: 'json',
+                    jsonp: "callback",  
+                    dataType: 'jsonp',
 				    data: {
 				        	"email":" devtest@prodigious ",
 							"customer_id":1234568904,
 							"patient_id":1234568904,
-							"address_line_1":"Birri de Santa Barbara"
+							"address_line_1":"Birri de Santa Barbara",
+                            format: "json"
 				    },
 				    headers: {
 				       
