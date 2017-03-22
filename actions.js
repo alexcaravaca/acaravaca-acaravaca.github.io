@@ -11,8 +11,7 @@
 				  $.ajax({
 				    url: 'https://demo-1.fico.site/data/api/entities/customer',
 				    type: 'POST',
-                    crossDomain: true,
-                    jsonp: "callback",  
+                    crossDomain: true,  
                     dataType: 'jsonp',
 				    data: {
 				        	"email":" devtest@prodigious ",
@@ -28,6 +27,8 @@
 					 
 
 				    },
+                      
+                    jsonpCallback: "localJsonpCallback",  
 				   
 				    success: function (data) {
 				        console.info("work "+data);
@@ -41,6 +42,18 @@
 
   
 	});
+    
+    
+    function localJsonpCallback(json) {
+        if (!json.Error) {
+           console.log(json.Error);
+        }
+        else {
+            
+            console.log(json);
+            
+        }
+    }
 
 
 })();
